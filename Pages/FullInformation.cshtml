@@ -1,0 +1,21 @@
+﻿@page
+@model WebApplication1.Pages.FullInformationModel
+@{
+    Layout = "_Layout";
+}
+
+
+<h1 style="color:dodgerblue">EzSneakers - Кроссовки и Одежда</h1>
+<div class="row mt-5 mb-2">
+    @{
+    <div class=" col-lg-4">
+    <img class="img-thumbnail" src="@Model.FullSneakers.img" width="1000" height="750" alt="@Model.FullSneakers.name">
+    <h2>@Model.FullSneakers.name</h2>
+    <p>Фирма: @Model.FullSneakers.brand</p>
+    <p>@Model.FullSneakers.shortDesc</p>
+    <p>Полное описание: @Model.FullSneakers.longDesc</p>
+    <p>Цена: @Model.FullSneakers.price.ToString("c")</p>
+    <p><a class="btn btn-warning" href="/AddCustomer">Заказать</a></p>
+    </div>
+    }
+</div>

@@ -1,0 +1,20 @@
+﻿@page
+@model WebApplication1.Pages.HomePageModel
+@{
+    Layout = "_Layout";
+}
+
+<h1 style ="color:dodgerblue">EzSneakers - Кроссовки и Одежда</h1>
+<div class="row mt-5 mb-2">
+    @{
+    foreach (var elem in Model.SneakersList)
+    {
+        <div class="col-lg-4">
+        <img class="img-thumbnail" src="@elem.img" width="300" height="250" alt="@elem.name">
+        <h2>@elem.name</h2>
+        <p>@elem.shortDesc</p>
+        <p><a class="btn btn-warning" href="/FullInformation?SneakersName=@elem.name">Подробнее</a></p>
+        </div>
+    }
+    }
+</div>
